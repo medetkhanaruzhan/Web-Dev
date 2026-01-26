@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project: Recipe book</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: rgb(250, 250, 250);
+        color: rgb(35, 35, 35);
+        line-height: 1.6;
+        margin: 0;
+        padding: 24px;
+      }
+
+      .container {
+        max-width: 780px;
+        margin: 0 auto;
+        background: white;
+        border: 1px solid rgb(230, 230, 230);
+        padding: 22px;
+      }
+
+      h1 {
+        margin-top: 0;
+        letter-spacing: 0.5px;
+      }
+
+      .toc {
+        background: rgb(245, 245, 245);
+        padding: 12px 14px;
+        border-radius: 8px;
+      }
+
+      a {
+        color: rgb(90, 70, 140);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .recipe {
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px solid rgb(230, 230, 230);
+      }
+
+      .details {
+        background: rgb(240, 248, 255);
+        padding: 10px 12px;
+        border-left: 5px solid rgb(90, 70, 140);
+        border-radius: 8px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th, td {
+        border: 1px solid rgb(220, 220, 220);
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background: rgb(250, 240, 255);
+      }
+
+      .steps li {
+        margin: 6px 0;
+      }
+
+      .source {
+        font-style: italic;
+        color: rgb(110, 110, 110);
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="top">Aruzhan's Recipe Book</h1>
+
+      <div class="toc">
+        <h2>Contents:</h2>
+        <ol>
+          <li><a href="#recipe1">Recipe #1: Fluffy Pancakes</a></li>
+          <li><a href="#recipe2">Recipe #2: Simple Chicken Salad</a></li>
+          <li><a href="#recipe3">Recipe #3: Hot Chocolate</a></li>
+        </ol>
+      </div>
+
+      <!-- RECIPE 1 -->
+      <div class="recipe" id="recipe1">
+        <h2>Recipe #1: Fluffy Pancakes</h2>
+
+        <div class="details">
+          <ul>
+            <li><strong>Time:</strong> ~20 minutes</li>
+            <li><strong>Serves:</strong> 2–3</li>
+            <li><strong>Good for:</strong> breakfast</li>
+          </ul>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Ingredients</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Flour</td><td>1 cup</td></tr>
+            <tr><td>Milk</td><td>1 cup</td></tr>
+            <tr><td>Egg</td><td>1</td></tr>
+            <tr><td>Sugar</td><td>1 tbsp</td></tr>
+            <tr><td>Baking powder</td><td>2 tsp</td></tr>
+            <tr><td>Salt</td><td>pinch</td></tr>
+            <tr><td>Butter or oil</td><td>for frying</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Steps</h3>
+        <ol class="steps">
+          <li>Mix dry ingredients: flour, sugar, baking powder, salt.</li>
+          <li>Add milk and egg, whisk until smooth (don’t overmix).</li>
+          <li>Heat a pan, lightly oil it.</li>
+          <li>Pour batter, cook 1–2 minutes, flip, cook another 1 minute.</li>
+          <li>Serve with honey, berries, or jam.</li>
+        </ol>
+
+        <p class="source">
+          Source: <a href="https://en.wikipedia.org/wiki/Pancake">Wikipedia (Pancake)</a>
+        </p>
+        <p><a href="#top">Back to top</a></p>
+      </div>
+
+      <!-- RECIPE 2 -->
+      <div class="recipe" id="recipe2">
+        <h2>Recipe #2: Simple Chicken Salad</h2>
+
+        <div class="details">
+          <ul>
+            <li><strong>Time:</strong> ~15 minutes (if chicken is cooked)</li>
+            <li><strong>Serves:</strong> 2</li>
+            <li><strong>Good for:</strong> lunch</li>
+          </ul>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Ingredients</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Cooked chicken</td><td>200 g</td></tr>
+            <tr><td>Cucumber</td><td>1</td></tr>
+            <tr><td>Tomatoes</td><td>2</td></tr>
+            <tr><td>Lettuce</td><td>a handful</td></tr>
+            <tr><td>Olive oil</td><td>1–2 tbsp</td></tr>
+            <tr><td>Lemon juice</td><td>1 tbsp</td></tr>
+            <tr><td>Salt & pepper</td><td>to taste</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Steps</h3>
+        <ol class="steps">
+          <li>Slice cucumber and tomatoes, tear lettuce.</li>
+          <li>Cut chicken into pieces.</li>
+          <li>Mix everything in a bowl.</li>
+          <li>Add olive oil, lemon juice, salt and pepper.</li>
+          <li>Serve immediately.</li>
+        </ol>
+
+        <p class="source">
+          Source: <a href="https://en.wikipedia.org/wiki/Salad">Wikipedia (Salad)</a>
+        </p>
+        <p><a href="#top">Back to top</a></p>
+      </div>
+
+      <!-- RECIPE 3 -->
+      <div class="recipe" id="recipe3">
+        <h2>Recipe #3: Hot Chocolate</h2>
+
+        <div class="details">
+          <ul>
+            <li><strong>Time:</strong> ~10 minutes</li>
+            <li><strong>Serves:</strong> 1–2</li>
+            <li><strong>Good for:</strong> cozy evenings</li>
+          </ul>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Ingredients</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Milk</td><td>2 cups</td></tr>
+            <tr><td>Cocoa powder</td><td>2 tbsp</td></tr>
+            <tr><td>Sugar</td><td>1–2 tbsp</td></tr>
+            <tr><td>Chocolate (optional)</td><td>30–50 g</td></tr>
+            <tr><td>Vanilla (optional)</td><td>pinch</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Steps</h3>
+        <ol class="steps">
+          <li>Warm milk in a small pot (don’t boil).</li>
+          <li>Whisk in cocoa and sugar until smooth.</li>
+          <li>If using chocolate, add it and stir until melted.</li>
+          <li>Pour into cups. Optional: marshmallows on top.</li>
+        </ol>
+
+        <p class="source">
+          Source: <a href="https://en.wikipedia.org/wiki/Hot_chocolate">Wikipedia (Hot chocolate)</a>
+        </p>
+        <p><a href="#top">Back to top</a></p>
+      </div>
+    </div>
+  </body>
+</html>
