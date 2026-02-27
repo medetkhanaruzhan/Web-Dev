@@ -1,0 +1,185 @@
+.product-card {
+    background: var(--color-card);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition-speed) ease,
+        box-shadow var(--transition-speed) ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-card-hover);
+
+        .product-card__image {
+            transform: scale(1.05);
+        }
+    }
+
+    
+    &__image-wrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        background: #f8f9fc;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 0.75rem;
+        transition: transform 0.4s ease;
+    }
+
+    &__badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: var(--color-primary);
+        color: #fff;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 3px 8px;
+        border-radius: 6px;
+        text-transform: uppercase;
+    }
+
+   
+    &__body {
+        padding: 1.125rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 0.625rem;
+    }
+
+    &__name {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--color-text-primary);
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    &__description {
+        font-size: 0.75rem;
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+
+        .star {
+            font-size: 0.9rem;
+            color: var(--color-star-empty);
+
+            &--filled {
+                color: var(--color-star-filled);
+            }
+
+            &--partial {
+                position: relative;
+                color: var(--color-star-empty);
+
+                &::after {
+                    content: '★';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 50%;
+                    overflow: hidden;
+                    color: var(--color-star-filled);
+                }
+            }
+        }
+
+        .rating-value {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-star-filled);
+            margin-left: 4px;
+        }
+    }
+
+    
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: auto;
+        padding-top: 0.5rem;
+        border-top: 1px solid var(--color-border);
+    }
+
+    &__price {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--color-primary);
+        letter-spacing: -0.3px;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 0.4rem;
+    }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px;
+    border-radius: var(--radius-btn);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all var(--transition-speed);
+
+    &--whatsapp {
+        background: rgba(37, 211, 102, 0.1);
+        color: #1a9e4f;
+        border: 1px solid rgba(37, 211, 102, 0.35);
+
+        &:hover {
+            background: var(--color-whatsapp);
+            color: #fff;
+            border-color: var(--color-whatsapp);
+            transform: scale(1.05);
+        }
+    }
+
+    &--telegram {
+        background: rgba(44, 165, 224, 0.1);
+        color: #1278ad;
+        border: 1px solid rgba(44, 165, 224, 0.35);
+
+        &:hover {
+            background: var(--color-telegram);
+            color: #fff;
+            border-color: var(--color-telegram);
+            transform: scale(1.05);
+        }
+    }
+}

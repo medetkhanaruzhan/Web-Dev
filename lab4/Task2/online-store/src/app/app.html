@@ -1,0 +1,31 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    
+    <div class="site-header__logo">
+      <span class="logo-icon">🛒</span>
+      <span class="logo-text">Kaspi <strong>Store</strong></span>
+    </div>
+    <div class="site-header__tagline">Лучшие товары с Kaspi.kz</div>
+  </div>
+</header>
+
+<main class="site-main">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <p>© 2024 Kaspi Store — All products link to <a href="https://kaspi.kz" target="_blank"
+      rel="noopener noreferrer">kaspi.kz</a></p>
+</footer>
+<div class="price-filter">
+
+  <label>
+    Min: {{ minPrice }} ₸
+    <input
+      type="range"
+      min="0"
+      max="1000000000"
+      step="1000"
+      [(ngModel)]="minPrice"
+    />
+  </label>

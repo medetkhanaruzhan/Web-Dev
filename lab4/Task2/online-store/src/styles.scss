@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-bg: #f5f6fa;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-card-hover: #fafbff;
+  --color-border: #e2e6f0;
+  --color-primary: #e02020;
+  --color-primary-light: #ff3c3c;
+  --color-secondary: #0085c7;
+  --color-whatsapp: #25d366;
+  --color-telegram: #2ca5e0;
+  --color-text-primary: #1a1d2e;
+  --color-text-secondary: #5a6380;
+  --color-text-muted: #9aa0b8;
+  --color-star-filled: #f5a623;
+  --color-star-empty: #dde1ef;
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.14);
+  --radius-card: 16px;
+  --radius-btn: 10px;
+  --transition-speed: 0.25s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef0f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5cade;
+  border-radius: 4px;
+}

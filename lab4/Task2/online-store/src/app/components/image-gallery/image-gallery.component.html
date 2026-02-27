@@ -1,0 +1,42 @@
+<div class="gallery-backdrop" (click)="onBackdropClick($event)">
+  <div class="gallery-modal">
+    <button class="gallery-close" (click)="closeGallery()" aria-label="Close gallery">
+      ✕
+    </button>
+
+    <div class="gallery-main">
+      <button class="gallery-nav gallery-nav--prev" (click)="prev()" aria-label="Previous image">
+        ‹
+      </button>
+
+      <div class="gallery-main-image-wrapper">
+        <img
+          [src]="currentImage"
+          [alt]="product.name"
+          class="gallery-main-image"
+        />
+      </div>
+
+      <button class="gallery-nav gallery-nav--next" (click)="next()" aria-label="Next image">
+        ›
+      </button>
+    </div>
+
+    <div class="gallery-thumbnails">
+      @for (img of product.images; track $index) {
+        <button
+          class="gallery-thumb-btn"
+          [class.active]="currentIndex() === $index"
+          (click)="selectImage($index)"
+          [attr.aria-label]="'View image ' + ($index + 1)"
+        >
+          <img [src]="img" [alt]="product.name + ' image ' + ($index + 1)" class="gallery-thumb" />
+        </button>
+      }
+    </div>
+
+    <div class="gallery-counter">
+      {{ currentIndex() + 1 }} / {{ product.images.length }}
+    </div>
+  </div>
+</div>

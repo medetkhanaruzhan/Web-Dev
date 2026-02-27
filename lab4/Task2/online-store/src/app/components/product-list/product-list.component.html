@@ -1,0 +1,12 @@
+<section class="product-list">
+    <div class="product-list__header">
+        <h2 class="product-list__title">Популярные товары на <span>Kaspi.kz</span></h2>
+        <p class="product-list__subtitle">{{ products.length }} товаров на Kaspi.kz</p>
+    </div>
+
+    <div class="product-list__grid">
+        @for (product of products; track product.id) {
+        <app-product-card [product]="product" />
+        }
+    </div>
+</section>
