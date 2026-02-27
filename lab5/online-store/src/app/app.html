@@ -1,0 +1,31 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="site-header__logo">
+      <span class="logo-icon">🛒</span>
+      <span class="logo-text">Kaspi <strong>Store</strong></span>
+    </div>
+    <nav class="category-nav">
+      @for (cat of categories; track cat.id) {
+      <button class="category-btn" [class.active]="selectedCategoryId() === cat.id" (click)="selectCategory(cat.id)">
+        {{ cat.name }}
+      </button>
+      }
+    </nav>
+  </div>
+</header>
+
+<main class="site-main">
+  @if (selectedCategoryId() !== null) {
+  <app-product-list [products]="filteredProducts()" (productDeleted)="onDeleteProduct($event)" />
+  } @else {
+  <div class="welcome-screen">
+    <h1>Добро пожаловать в Kaspi Store!</h1>
+    <p>Выберите категорию выше, чтобы просмотреть товары.</p>
+  </div>
+  }
+</main>
+
+<footer class="site-footer">
+  <p>© 2024 Kaspi Store — All products link to <a href="https://kaspi.kz" target="_blank"
+      rel="noopener noreferrer">kaspi.kz</a></p>
+</footer>

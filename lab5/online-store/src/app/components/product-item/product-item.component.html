@@ -1,0 +1,45 @@
+<article class="product-item" (click)="openInKaspi()">
+  <div class="product-item__image-wrapper">
+    <img [src]="product().image" [alt]="product().name" class="product-item__image" loading="lazy" />
+    <div class="product-item__badge">kaspi.kz</div>
+  </div>
+
+  <div class="product-item__body">
+    <h3 class="product-item__name">{{ product().name }}</h3>
+    <p class="product-item__description">{{ product().description }}</p>
+
+    <div class="product-item__rating" [attr.aria-label]="'Rating: ' + product().rating + ' out of 5'">
+      @for (star of stars; track $index) {
+      <span class="star" [class.star--filled]="star.filled" [class.star--partial]="star.partial"
+        aria-hidden="true">★</span>
+      }
+      <span class="rating-value">{{ product().rating }}</span>
+    </div>
+
+    <div class="product-item__stats">
+        <span class="likes-count">❤️ {{ product().likes }}</span>
+    </div>
+
+    <div class="product-item__footer">
+      <span class="product-item__price">{{ formattedPrice }}</span>
+
+      <div class="product-item__actions" (click)="$event.stopPropagation()">
+        <button class="btn btn--like" (click)="like()" title="Like product">
+          👍 Like
+        </button>
+        <button class="btn btn--delete" (click)="onRemove()" title="Remove product">
+          🗑️
+        </button>
+      </div>
+    </div>
+
+    <div class="product-item__share" (click)="$event.stopPropagation()">
+        <button class="btn btn--whatsapp" (click)="shareOnWhatsApp()" title="Share via WhatsApp">
+            WA
+        </button>
+        <button class="btn btn--telegram" (click)="shareOnTelegram()" title="Share via Telegram">
+            TG
+        </button>
+    </div>
+  </div>
+</article>
